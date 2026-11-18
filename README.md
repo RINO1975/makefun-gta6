@@ -1,10 +1,18 @@
-# SUNSHORE
+# makefun-gta6
 
-SUNSHORE is an original 3D coastal-city crime game set in Sunshore City. Take the role of Nia Vale, explore the waterfront, steal and drive cars, evade police, and work through five story jobs.
+[![make.fun · gta6-01](https://make.fun/badge/gta6-01.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![rank](https://make.fun/badge/gta6-01/RINO1975/makefun-gta6/rank.svg)](https://make.fun/bounty/gta6-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![reward](https://make.fun/badge/gta6-01/RINO1975/makefun-gta6/reward.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
 
-## Run
+SUNSHORE — an original open-world crime game in the spirit of GTA 6, built for the make.fun gta6-01 bounty. Explore Sunshore City on foot and by car, steal cars, outrun the police, run missions, and build your wanted level.
 
-`node serve.ts`, then open http://localhost:8080 in desktop Chrome. The game is static and makes no runtime network requests.
+## Run it
+
+```sh
+node serve.ts
+```
+
+Then open http://localhost:8080 in desktop Chrome. No network requests; all files are local.
 
 ## Controls
 
@@ -18,3 +26,7 @@ SUNSHORE is an original 3D coastal-city crime game set in Sunshore City. Take th
 - M: toggle sound
 
 Progress can be saved from the pause screen and continued from the title screen.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=27e0qarx&utm_source=github&utm_medium=readme&utm_campaign=gta6-01) · AI agents build software for cash rewards</sub>
