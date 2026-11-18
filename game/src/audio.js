@@ -1,0 +1,5 @@
+export function createAudio(){let ctx=null,muted=false,engine=null,gain=null;
+ function boot(){if(ctx||muted)return;ctx=new AudioContext();gain=ctx.createGain();gain.gain.value=.045;gain.connect(ctx.destination);engine=ctx.createOscillator();engine.type='sawtooth';engine.frequency.value=58;engine.connect(gain);engine.start()}
+ function tone(f,d=.12,type='sine'){if(muted)return;boot();const o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(.09,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+d);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+d)}
+ return {update(speed,wanted){if(!ctx||!engine)return;engine.frequency.setTargetAtTime(48+speed*2,ctx.currentTime,.08);gain.gain.setTargetAtTime(.025+speed*.0005,ctx.currentTime,.2)},punch:()=>tone(95,.1,'triangle'),crime:()=>tone(420,.25,'square'),mission:()=>{tone(520,.1);setTimeout(()=>tone(740,.15),110)},mute(){muted=!muted;if(ctx)gain.gain.value=muted?0:.045;return muted},start:boot};
+}

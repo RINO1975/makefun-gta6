@@ -1,0 +1,1 @@
+export function createWanted(){return {level:0,heat:0,lastCrime:0,raise(n,t){this.level=Math.min(5,Math.max(this.level,n));this.heat=100;this.lastCrime=t},update(dt,t,seen){if(this.level&&t-this.lastCrime>3&&!seen)this.heat-=dt*2.8;if(this.heat<=0){this.level=0;this.heat=0}}}}
